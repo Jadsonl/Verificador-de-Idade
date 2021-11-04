@@ -16,10 +16,10 @@ function verifica(){
       if(idade >= 0 && idade< 10){
         //criança
         img.setAttribute('src', 'imagens/bebe-menino.png')
-      }else if(idade >=10 && idade <21){
+      }else if( idade < 21){
         //jovem
         img.setAttribute('src', 'imagens/homem-jovem.png' )
-      }else if(iade < 50){
+      }else if(idade < 50){
         //adulto
         img.setAttribute('src', 'imagens/adulto-h.png')
       }else{
@@ -43,7 +43,8 @@ function verifica(){
         img.setAttribute('src', 'imagens/idosa.png')
       }
     }
-   res.innerHTML=`Detectamos ${genero} com ${idade} anos.`
-  res.appendChild(img) 
+  
+    res.innerHTML=`<p>Detectamos ${genero} com ${idade} anos.</p>`
+    res.appendChild(img) 
   }
 }
